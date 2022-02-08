@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,LoginActivity.class));
+                finish();
             }
         });
 
@@ -61,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(MainActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(MainActivity.this,HomeActivity.class));
                     finish();
+                    startActivity(new Intent(MainActivity.this,HomeActivity.class));
                 }else{
                     try
                     {
