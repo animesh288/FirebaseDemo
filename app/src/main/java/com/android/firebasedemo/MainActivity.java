@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 if(task.isSuccessful()){
                     Toast.makeText(MainActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(MainActivity.this,HomeActivity.class));
+                    finish();
                 }else{
                     try
                     {
